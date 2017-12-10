@@ -19,6 +19,7 @@ public class SingleListViewActivity extends AppCompatActivity {
 
     private void initLayout(){
         String[] items = getResources().getStringArray(R.array.arrays_list_item);
+        // 단일 체크 레이아웃 어뎁터 설정 android.R.layout.simple_list_item_single_choice
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_single_choice, items);
         ListView listview = findViewById(R.id.lv_effects);
 
