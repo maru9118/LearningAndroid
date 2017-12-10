@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.overface.learningandroid.listview.MultiChoiceListViewActivity;
 import com.overface.learningandroid.listview.SingleListViewActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -50,6 +51,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SingleListViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button = findViewById(R.id.btn_multi_list_view);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MultiChoiceListViewActivity.class);
                 startActivity(intent);
             }
         });

@@ -7,23 +7,22 @@ import android.widget.ListView;
 
 import com.overface.learningandroid.R;
 
-public class SingleListViewActivity extends AppCompatActivity {
+public class MultiChoiceListViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_single_list_view);
-
+        setContentView(R.layout.activity_multi_choice_list_view);
         initLayout();
     }
 
     private void initLayout(){
         String[] items = getResources().getStringArray(R.array.arrays_list_item);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_single_choice, items);
-        ListView listview = findViewById(R.id.lv_effects);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_multiple_choice, items);
+        ListView listview = findViewById(R.id.lv_multi);
 
-        // 단일 선택 설정
-        listview.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        // 다중 선택 설정
+        listview.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         listview.setAdapter(adapter);
     }
 }
