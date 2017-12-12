@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.overface.learningandroid.colorpicker.ColorPickerActivity;
 import com.overface.learningandroid.listview.MultiChoiceListViewActivity;
 import com.overface.learningandroid.listview.SingleListViewActivity;
 
@@ -60,6 +61,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MultiChoiceListViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button = findViewById(R.id.btn_color_picker_views);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ColorPickerActivity.class);
                 startActivity(intent);
             }
         });

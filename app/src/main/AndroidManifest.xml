@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".listview.SingleListViewActivity" />
-        <activity android:name=".listview.MultiChoiceListViewActivity"></activity>
+        <activity android:name=".listview.MultiChoiceListViewActivity" />
+        <activity android:name=".colorpicker.ColorPickerActivity"></activity>
     </application>
 
 </manifest>
