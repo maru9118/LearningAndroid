@@ -84,6 +84,11 @@ public class ColorPickerActivity extends AppCompatActivity implements View.OnCli
 
     }
 
+    /**
+     * @brief : Color Picker 대화상자에서 선택된 색상을 콜백으로 알려주는 메소드
+     * @param dialogId : Color Picker 대화상자에 고유 ID
+     * @param color : Color Picker 대화상자에서 선택 된 색상
+     */
     @Override
     public void onColorSelected(int dialogId, final int color) {
 
@@ -103,6 +108,10 @@ public class ColorPickerActivity extends AppCompatActivity implements View.OnCli
         });
     }
 
+    /**
+     * @brief : Color Picker dismiss 호출되는 리스너
+     * @param dialogId : 종료된 대화상자 고유 아이디
+     */
     @Override
     public void onDialogDismissed(int dialogId) {
 

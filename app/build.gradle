@@ -19,6 +19,8 @@ android {
 }
 
 dependencies {
+    
+    // Color Picker Library 사용을 위한 compile 경로 추가
     compile 'com.jaredrummler:colorpicker:1.0.1'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
