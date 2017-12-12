@@ -17,12 +17,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:gravity="center"
             android:id="@+id/tv_color"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="40dp"
-            android:text="Color" />
+            android:gravity="center"
+            android:text="Color"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/btn_color_picker1"
@@ -37,9 +37,9 @@
             android:text="Preset Color Picker" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_color_picker3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Preset Color AlphaSlider Picker" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

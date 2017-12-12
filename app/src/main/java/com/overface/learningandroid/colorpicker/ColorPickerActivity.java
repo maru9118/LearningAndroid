@@ -30,8 +30,9 @@ public class ColorPickerActivity extends AppCompatActivity implements View.OnCli
 
         Button button = findViewById(R.id.btn_color_picker1);
         button.setOnClickListener(this);
-
         button = findViewById(R.id.btn_color_picker2);
+        button.setOnClickListener(this);
+        button = findViewById(R.id.btn_color_picker3);
         button.setOnClickListener(this);
     }
 
@@ -63,8 +64,21 @@ public class ColorPickerActivity extends AppCompatActivity implements View.OnCli
                         .setAllowPresets(false)
                         .setDialogId(DIALOG_PRESET_ID)
                         .setColor(Color.BLACK)
+                        .setShowAlphaSlider(false)
+                        .show(this);
+                break;
+
+            case R.id.btn_color_picker3:
+                ColorPickerDialog.newBuilder()
+                        .setDialogType(ColorPickerDialog.TYPE_PRESETS)
+                        .setAllowPresets(false)
+                        .setDialogId(DIALOG_PRESET_ID)
+                        .setColor(Color.BLACK)
                         .setShowAlphaSlider(true)
                         .show(this);
+                break;
+
+            default:
                 break;
         }
 
