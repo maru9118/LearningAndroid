@@ -1,7 +1,13 @@
 apply plugin: 'com.android.application'
 
+/**
+ * @brief : defaultConfig 블록 안의 archivesBaseName 변수에 명시적으로 어플리케이션에 이름을 대입 하면 된다.
+ * */
 android {
+    def APP_NAME = "Text Animation"
+
     compileSdkVersion 26
+
     defaultConfig {
         applicationId "com.overface.learningandroid"
         minSdkVersion 19
@@ -9,17 +15,29 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        archivesBaseName = APP_NAME
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            /**
+             * variant.name : release, debug 등 build variants 에 설정된 target
+             * variant.versionName : defaultConfig 에 정의된 versionName
+             */
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = APP_NAME + "${variant.name}-${variant.versionName}.apk"
+                }
+            }
         }
     }
 }
 
 dependencies {
-    
+
     // Color Picker Library 사용을 위한 compile 경로 추가
     compile 'com.jaredrummler:colorpicker:1.0.1'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
